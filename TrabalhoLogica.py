@@ -87,7 +87,7 @@ class Npuzzle:
         for chave, valor in Npuzzle.dictAcaoSimbolos.items():
             print(chave, "->", valor)
 
-    def regraAcao():
+    def regraTransicao():
         g = Glucose3()
 
         for estado in range(Npuzzle.qtdEstados):
@@ -255,7 +255,7 @@ def main():
     Npuzzle.MapeamentoSimbolos()
     Npuzzle.regrasEstado()
     Npuzzle.mapeamentoAcao()
-    Npuzzle.regraAcao()
+    Npuzzle.regraTransicao()
 
     print(Npuzzle.g.solve())
     print(Npuzzle.g.get_model())
